@@ -1,0 +1,16 @@
+this is very beginign
+
+
+
+coomit 1
+commit 1 merger
+revert 
+commit 2 
+merger 
+
+
+
+master
+
+commit 1
+commit 2
