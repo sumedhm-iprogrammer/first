@@ -6,11 +6,6 @@ pipeline {
             steps {
                 sh 'php --version'
             }
-        },
-        stage('Unit Test') {
-            steps {
-                sh 'php -r "echo php_info();"'
-            }
         }
     }
 }
