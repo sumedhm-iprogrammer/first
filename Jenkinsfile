@@ -1,15 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'php:7'
+        }
+    }
+    environment {
+        CI = 'true'
+    }
     stages {
         stage('Build') {
-            steps {
-                sh 'apk --no-cache add wget'
-                sh 'wget https://phar.phpunit.de/phpunit-6.5.phar'
-                sh 'chmod +x phpunit-6.5.phar'
-                sh 'mv phpunit-6.5.phar /usr/local/bin/phpunit'
-            }
-        }
-        stage('Test') {
             steps {
                 sh 'phpunit --version'
             }
