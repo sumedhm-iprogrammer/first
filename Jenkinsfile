@@ -11,15 +11,7 @@ pipeline {
                 branch 'development' 
             }
             steps {
-                sh 'phpunit --verbose MultipleDependenciesTest'
-            }
-        }
-        stage('Deploy for production') {
-            when {
-                branch 'master'  
-            }
-            steps {
-                sh 'phpunit --verbose MultipleDependenciesTest'
+                sh 'phpunit MultipleDependenciesTest'
             }
         }
     }
