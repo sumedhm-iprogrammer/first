@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deliver for Production') {
             when {
-                branch 'production' 
+                branch 'master' 
             }
             steps {
                 sh 'phpunit MultipleDependenciesTest'
