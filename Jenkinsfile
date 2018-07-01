@@ -1,12 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'php:7'
-        }
-    }
-    environment {
-        CI = 'true'
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
