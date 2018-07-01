@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apt-get install wget'
+                sh 'apk --no-cache add wget'
                 sh 'wget https://phar.phpunit.de/phpunit-6.5.phar'
                 sh 'chmod +x phpunit-6.5.phar'
                 sh 'mv phpunit-6.5.phar /usr/local/bin/phpunit'
